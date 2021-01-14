@@ -15,43 +15,40 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
-}
-
-.wave {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  z-index: -1;
+  overflow-x: hidden;
+  background: url(https://i.ibb.co/W2jb1kP/Frame-1.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  
 }
 
 .container {
+  
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 7rem;
-  padding: 0 2rem;
+  display: flow-root;
+  padding: 150px;
+
+  
+}
+.login {
+  border: 1px solid;
+  padding: 40px 80px;
+}
+.registration {
+  border: 1px solid;
+  padding: 40px 80px ;
 }
 
-.img {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 .login-content {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
 }
 
-.img img {
-  width: 500px;
-}
 
 form {
   width: 360px;
@@ -234,15 +231,13 @@ a:hover {
 
 </style>
 <body>
-	<img class="wave" src="https://i.ibb.co/W2jb1kP/Frame-1.png">
+	
 	<div class="container">
-		<div class="img">
-			<img src="">
-		</div>
+   
 		<div class="login-content">
+
+      <div class="login">
 			<form action="index.html">
-				<img src="https://svgshare.com/i/SwB.svg">
-				<h3>Admin</h3>
 				<h2 class="title">LOGIN FORM</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -265,8 +260,62 @@ a:hover {
             	<a href="#">Forgot Password?</a>
             	<input type="submit" class="btn" value="Login">
             </form>
+          </div>
+
+
+            <div class="registration">
+            <form action="index.html">
+              
+              <h2 class="title">REGISTRATION FORM</h2>
+                     <div class="input-div one">
+                        <div class="i">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="div">
+                            <h5>Username</h5>
+                            <input type="text" class="input">
+                        </div>
+                         </div>
+                         
+                         
+                         <div class="input-div pass">
+                        <div class="i"> 
+                           <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="div">
+                           <h5>Mobile Number</h5>
+                           <input type="mobile number" class="input">
+                       </div>
+                      </div>
+      
+      
+                      <div class="input-div pass">
+                          <div class="i"> 
+                               <i class="fas fa-envelope"></i>
+                          </div>
+                          <div class="div">
+                               <h5>Email</h5>
+                               <input type="email" class="input">
+                       </div>
+                    </div>
+                   
+                   
+                    <div class="input-div pass">
+                      <div class="i"> 
+                           <i class="fas fa-lock"></i>
+                      </div>
+                      <div class="div">
+                           <h5>Password</h5>
+                           <input type="password" class="input">
+                   </div>
+                </div>
+                    
+                    <input type="submit" class="btn" value="Register">
+                  </form>
+                </div>
         </div>
     </div>
+    
 	
 	<script>
 		const inputs = document.querySelectorAll(".input");
